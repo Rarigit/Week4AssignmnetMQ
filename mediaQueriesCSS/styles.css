@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: aquamarine;
+}
+
+#logo{  /* Logo is in reference to images */
+    height: 10vh;
+    align-items: right;
+    justify-items: right;
+}
+
+#speedyHeaders{
+    display: grid;
+    grid-template-columns: 33vw 1fr 1fr;
+    background-color: azure;
+    min-height: 7vh;
+    justify-items: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1em;
+    border: 1vh lightsalmon solid;
+    border-radius: 10%;
+    padding: 1vh aquamarine dashed;
+    margin: 1vh aquamarine dashed;
+    text-decoration: none;
+}
+
+
+#Gallery{
+    display: inline; /*Had to change from grid to inline here at the end as I realized that I was doing dektop media rules first accidentally*/
+    grid-template-rows: 2fr, 2fr 1fr; 
+    grid-template-rows: 25vh ;
+    width: 75vw;
+    margin: 0.5cm;
+    font-size: 1rem;
+}
+
+#Ferrari{
+    display: grid;
+    grid-template-rows: 10vh 2fr 1fr ;
+    grid-auto-flow: row;
+}
+
+#Lambroghini{
+    display: grid;
+    grid-template-rows: 10vh 2fr 1fr ;
+    grid-auto-flow: row;
+}
+
+#Mclaren{
+    display: grid;
+    grid-template-rows: 10vh 2fr 1fr ;
+    grid-auto-flow: row;
+}
+
+#speedyFooter{
+    display: grid;
+    grid-template-columns: 33vw 1fr 1fr;
+    background-color: azure;
+    min-height: 7vh;
+    align-items: center;
+    justify-items: center;
+    font-style: italic;
+}
+
+/* Tablet Media */
+@media only screen and (min-width: 700px) {
+    #Gallery{
+        font-size: 1rem;
+        display: grid;
+    }
+    #logo{
+        height: 12vh;
+    }
+}
+
+/* Desktop Media */
+@media only screen and (min-width: 1000px) {
+    #Gallery{
+        font-size: 1.2rem;
+        display: grid;
+    }
+    #logo{
+        height: 14vh;
+    }
+}
